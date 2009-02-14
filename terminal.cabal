@@ -1,0 +1,25 @@
+Name:             terminal
+Version:          0.1
+Description:      A simple library for creating animated ascii art on ANSI terminals.
+Synopsis:         A simple library for creating animated ascii art on ANSI terminals.
+Category:         System, Terminal
+License:          BSD3
+License-file:     LICENSE
+Author:           Sebastiaan Visser
+Maintainer:       sfvisser@cs.uu.nl
+Build-Type:       Simple
+Build-Depends:    base, containers
+
+GHC-Options:      -Wall
+Extensions:       CPP
+HS-Source-Dirs:   src
+Other-modules:    
+Exposed-modules:  Bitmap,
+                  Geometry,
+                  Plot,
+                  Terminal
+
+Executable:       terminal-demo
+HS-Source-Dirs:   src
+Main-is:          Main.hs
+
