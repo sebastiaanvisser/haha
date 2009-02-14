@@ -1,4 +1,4 @@
-module Terminal where
+module Graphics.Ascii.Haha.Terminal where
 
 import Control.Applicative
 import Data.List (intercalate)

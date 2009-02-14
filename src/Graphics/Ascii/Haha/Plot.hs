@@ -1,10 +1,10 @@
-module Plot where
+module Graphics.Ascii.Haha.Plot where
 
 import Data.List (sortBy)
 
-import qualified Bitmap as Bm
-import Geometry
-import Terminal
+import qualified Graphics.Ascii.Haha.Bitmap as Bm
+import Graphics.Ascii.Haha.Geometry
+import Graphics.Ascii.Haha.Terminal
 
 data Pixel = Pixel Char String
   deriving (Show, Eq)

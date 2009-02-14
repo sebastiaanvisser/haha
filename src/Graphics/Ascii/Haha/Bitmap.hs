@@ -1,9 +1,9 @@
-module Bitmap where
+module Graphics.Ascii.Haha.Bitmap where
 
 import qualified Data.Map as M
 import Prelude hiding (filter)
 
-import Geometry
+import Graphics.Ascii.Haha.Geometry
 
 --------[ image data type ]----------------------------------------------------
 

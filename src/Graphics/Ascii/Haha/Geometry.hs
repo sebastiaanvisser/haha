@@ -1,4 +1,4 @@
-module Geometry where
+module Graphics.Ascii.Haha.Geometry where
 
 ---------[ primitive geometries ]-----------------------------------------------
 

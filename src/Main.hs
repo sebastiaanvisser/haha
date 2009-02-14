@@ -1,10 +1,10 @@
 module Main where
 
 import Data.Time.Clock (getCurrentTime, utctDayTime)
-import Terminal
-import Geometry
-import Bitmap
-import Plot
+import Graphics.Ascii.Haha.Terminal
+import Graphics.Ascii.Haha.Geometry
+import Graphics.Ascii.Haha.Bitmap
+import Graphics.Ascii.Haha.Plot
 
 -- The viewport.
 
