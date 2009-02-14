@@ -1,4 +1,4 @@
 clear
 cabal configure &&
 cabal build &&
-./dist/build/terminal-demo/terminal-demo
+./dist/build/rotating-lambda/rotating-lambda

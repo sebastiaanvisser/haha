@@ -23,7 +23,7 @@ main :: IO ()
 main = do
   tick <- getCurrentTime >>= return . fromRational . toRational . utctDayTime
   putStr $ move 1 (1::Int)
-  putStrLn $ plot (myBmp tick)
+  putStr $ plot (myBmp tick)
   main
 
 plot :: Bitmap Double Pixel -> String
