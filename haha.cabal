@@ -1,8 +1,8 @@
 Name:             haha
-Version:          0.1
+Version:          0.2
 Description:      A simple library for creating animated ascii art on ANSI terminals.
 Synopsis:         A simple library for creating animated ascii art on ANSI terminals.
-Category:         System, Terminal
+Category:         Graphics
 License:          BSD3
 License-file:     LICENSE
 Author:           Sebastiaan Visser
@@ -14,10 +14,10 @@ GHC-Options:      -Wall
 Extensions:       CPP
 HS-Source-Dirs:   src
 Other-modules:    
-Exposed-modules:  Bitmap,
-                  Geometry,
-                  Plot,
-                  Terminal
+Exposed-modules:  Graphics.Ascii.Haha.Bitmap,
+                  Graphics.Ascii.Haha.Geometry,
+                  Graphics.Ascii.Haha.Plot,
+                  Graphics.Ascii.Haha.Terminal
 
 GHC-Options:      -Wall
 Executable:       rotating-lambda
