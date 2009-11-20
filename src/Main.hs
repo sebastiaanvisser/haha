@@ -33,8 +33,8 @@ plot = string False screen (Point 1 1) " " "" . list 0.5 view
 
 myBmp :: Double -> Bitmap Double Pixel
 myBmp t =
-    drawPoly (lambda   t) (Pixel 'x' yellow)
-  $ drawPoly (darkstar t) (Pixel '@' black)
+    drawPoly (lambda   t) (Pixel 'x' magentaBold)
+  $ drawPoly (darkstar t) (Pixel '@' blackBold)
   $ empty
 
 darkstar :: Double -> Poly Double

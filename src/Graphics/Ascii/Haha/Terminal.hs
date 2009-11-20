@@ -126,6 +126,16 @@ cyanBg    = clr $ bg Cyan
 whiteBg   = clr $ bg White
 resetBg   = clr $ bg Reset
 
+-- XTerms 256 color mode. Sadly not available everywhere.
+bg256, fg256 :: Integral i => i -> [String]
+fg256 n = ["38", "5", show n]
+bg256 n = ["48", "5", show n]
+
+x256, x256Bold, x256Bg :: Integral i => i -> String
+x256     i = clr        $ fg256 i
+x256Bold i = clr $ bold $ bg256 i
+x256Bg   i = clr        $ bg256 i
+
 {-
 
 big s =
