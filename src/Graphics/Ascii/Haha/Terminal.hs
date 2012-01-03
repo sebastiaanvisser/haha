@@ -18,12 +18,12 @@ clear    = clearAll ++ move (1::Int) 1
 
 -- Move the cursor to the specified row and column.
 
-move :: Integral i => i -> i -> String
+move :: (Integral i, Show i) => i -> i -> String
 move row col = esc "" [show col, show row] "H"
 
 -- Relative cursor movements.
 
-moveUp, moveDown, moveBack, moveForward :: Integral i => i -> String
+moveUp, moveDown, moveBack, moveForward :: (Integral i, Show i) => i -> String
 moveUp      rs = esc "" [show rs] "A"
 moveDown    rs = esc "" [show rs] "B"
 moveBack    cs = esc "" [show cs] "D"
@@ -127,11 +127,11 @@ whiteBg   = clr $ bg White
 resetBg   = clr $ bg Reset
 
 -- XTerms 256 color mode. Sadly not available everywhere.
-bg256, fg256 :: Integral i => i -> [String]
+bg256, fg256 :: (Integral i, Show i) => i -> [String]
 fg256 n = ["38", "5", show n]
 bg256 n = ["48", "5", show n]
 
-x256, x256Bold, x256Bg :: Integral i => i -> String
+x256, x256Bold, x256Bg :: (Integral i, Show i) => i -> String
 x256     i = clr        $ fg256 i
 x256Bold i = clr $ bold $ bg256 i
 x256Bg   i = clr        $ bg256 i
