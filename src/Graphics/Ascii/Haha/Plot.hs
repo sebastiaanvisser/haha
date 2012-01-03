@@ -31,7 +31,7 @@ list m r =
   . Bm.mapPoints (\(Point x y) -> Point x (y * m))
   . Bm.clip r
 
-string :: Integral i => Bool -> Rect i -> Point i -> String -> String -> [(Point i, Pixel)] -> String
+string :: (Integral i, Show i) => Bool -> Rect i -> Point i -> String -> String -> [(Point i, Pixel)] -> String
 string o rect@(Rect (Point x0 _) (Point x1 y1)) (Point x' y') nop prev p
   | ((x' > x1 && y' == y1) || (y' > y1)) = color reset
   | not (null p) && x  == x' && y  == y' = color b ++ [a] ++ lf ++ string o rect nextPos nop b xs
